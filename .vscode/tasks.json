@@ -3,7 +3,7 @@
     "tasks": [
         {
             "label": "jenv: build",
-            "detail": "使用 PyInstaller 构建 exe",
+            "detail": "Build exe with PyInstaller",
             "type": "shell",
             "command": "pwsh",
             "args": [
@@ -22,7 +22,7 @@
         },
         {
             "label": "jenv: list",
-            "detail": "列出所有已安装的 JDK",
+            "detail": "List all installed JDKs",
             "type": "shell",
             "command": "python",
             "args": [
@@ -37,7 +37,7 @@
         },
         {
             "label": "jenv: current",
-            "detail": "显示当前生效的 JAVA_HOME",
+            "detail": "Show current JAVA_HOME",
             "type": "shell",
             "command": "python",
             "args": [
@@ -52,7 +52,7 @@
         },
         {
             "label": "jenv: help",
-            "detail": "显示帮助信息",
+            "detail": "Show help information",
             "type": "shell",
             "command": "python",
             "args": [
@@ -67,7 +67,7 @@
         },
         {
             "label": "jenv: use",
-            "detail": "切换 JDK 版本（需管理员权限）",
+            "detail": "Switch JDK version (requires admin)",
             "type": "shell",
             "command": "python",
             "args": [
@@ -86,7 +86,7 @@
         {
             "id": "jdkVersion",
             "type": "promptString",
-            "description": "输入要切换的 JDK 版本（如 17, 1.8, 25）"
+            "description": "Enter JDK version to switch to (e.g. 17, 1.8, 25)"
         }
     ]
 }
