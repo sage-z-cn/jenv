@@ -1,0 +1,92 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "jenv: build",
+            "detail": "使用 PyInstaller 构建 exe",
+            "type": "shell",
+            "command": "pwsh",
+            "args": [
+                "-File",
+                "${workspaceFolder}/build.ps1"
+            ],
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "dedicated"
+            }
+        },
+        {
+            "label": "jenv: list",
+            "detail": "列出所有已安装的 JDK",
+            "type": "shell",
+            "command": "python",
+            "args": [
+                "${workspaceFolder}/jenv.py",
+                "list"
+            ],
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "dedicated"
+            }
+        },
+        {
+            "label": "jenv: current",
+            "detail": "显示当前生效的 JAVA_HOME",
+            "type": "shell",
+            "command": "python",
+            "args": [
+                "${workspaceFolder}/jenv.py",
+                "current"
+            ],
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "dedicated"
+            }
+        },
+        {
+            "label": "jenv: help",
+            "detail": "显示帮助信息",
+            "type": "shell",
+            "command": "python",
+            "args": [
+                "${workspaceFolder}/jenv.py",
+                "help"
+            ],
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "dedicated"
+            }
+        },
+        {
+            "label": "jenv: use",
+            "detail": "切换 JDK 版本（需管理员权限）",
+            "type": "shell",
+            "command": "python",
+            "args": [
+                "${workspaceFolder}/jenv.py",
+                "use",
+                "${input:jdkVersion}"
+            ],
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "dedicated"
+            }
+        }
+    ],
+    "inputs": [
+        {
+            "id": "jdkVersion",
+            "type": "promptString",
+            "description": "输入要切换的 JDK 版本（如 17, 1.8, 25）"
+        }
+    ]
+}
